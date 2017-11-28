@@ -8,16 +8,19 @@
 import state from './state.js';
 
 export default {
-	getName: (state) => {
+	name: (state) => {
 		return state.name;
 	},
-	getBirth: (state) => {
+	birthday: (state) => {
 		return state.birthday;
 	},
-	getSex: (state) => {
+	sex: (state) => {
 		return state.sex;
 	},
-	getAddress: (state) => {
+	address: (state) => {
 		return state.address;
+	},
+	count: (state) => {
+		return state.count;
 	}
 }

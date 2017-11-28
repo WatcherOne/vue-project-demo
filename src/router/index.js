@@ -7,8 +7,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// 主页
+// 导航的页面
 const Index = () => import('@/components/index');
+const myDaily = () => import('@/components/my-daily');
+const myPhoto = () => import('@/components/my-photo');
+const myThinking = () => import('@/components/my-thinking');
 const myMessage = () => import('@/components/my-message');
 
 Vue.use(Router)
@@ -33,6 +36,21 @@ export default new Router({
       path: '/index',
       name: 'Index',
       component: Index
+    },
+    {
+      path: '/my-daily',
+      name: 'myDaily',
+      component: myDaily
+    },
+    {
+      path: '/my-photo',
+      name: 'myPhoto',
+      component: myPhoto
+    },
+    {
+      path: '/my-thinking',
+      name: 'myThinking',
+      component: myThinking
     },
     {
       path: '/my-message',

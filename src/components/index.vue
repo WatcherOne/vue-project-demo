@@ -1,43 +1,48 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
+  <div class="index-page">
+    {{ name }}
+    <div v-on:click="addCount()">增加1</div>
+    <div v-on:click="delCount()">减少1</div>
+    {{ number }}
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';  // 作用自己体会吧！
+
 export default {
-  name: 'HelloWorld',
-  data () {
+  data() {
     return {
-      msg: 'INDEX'
+      number: 0
+    }
+  },
+  // 视图渲染后的回调函数
+  mounted() {},
+  // 得到state里面的数据,是将store中的"getters"映射到局部计算属性中
+  // 也可以改名字(newName: 'name')，然后直接可以得到值
+  computed: mapGetters([
+    'name',
+    'sex',
+    'birthday',
+    'address',
+    'count'
+  ]),
+  // 更改state中的状态唯一方法是提交mutation
+  // 然后通过store.commit来唤醒相同类型的mutation
+  // 因为mutation与commit已经封装好了，需要用直接调用函数
+  // mutation: this.$store.mutation.changeCount();
+  // commit：  this.$store.actions.changeCount()
+  methods: {
+    addCount() {
+      console.log(this.count, this.number);
+      this.$store.commit('addCount', this.count);
+      this.number++;
+    },
+    delCount() {
+      this.$store.commit('delCount', this.count)
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+<style scoped></style>

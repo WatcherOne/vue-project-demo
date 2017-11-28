@@ -1,5 +1,5 @@
 <template>
-  <div class="my-message-page">
+  <div class="my-thinking-page">
   </div>
 </template>
 

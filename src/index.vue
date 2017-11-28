@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderNav v-bind:name="$route.path" />
+    <HeaderNav />
     <transition name="slide-fade">
       <router-view></router-view>
     </transition>

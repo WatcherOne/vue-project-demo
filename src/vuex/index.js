@@ -6,12 +6,16 @@
 /***************************************/
 import Vue from 'vue';
 import VueX from 'vuex';
-import getters from './getters.js';
 import state from './state.js';
+import getters from './getters.js';
+import mutations from './mutations.js';
+import actions from './actions.js';
 
 Vue.use(VueX);
 
 export default new VueX.Store({
+  state,
   getters,
-  state
+  mutations,
+  actions
 })

@@ -60,10 +60,10 @@ gitkeep是一个hack，用于在仓库中保留空目录；
 ```
 
 > ### vue-router
-- router-view
+#### router-view
 - 是一个功能组件，渲染路径匹配的视图组件
 
-- router-link具有路由功能应用的导航
+#### router-link具有路由功能应用的导航
 - 属性
 1. to = "";   指定目标地址，点击后，内部会把to的值传到router.push()<br/>
    v-bind:to = ""; /  :to = ""; (另外有这两种写法)
@@ -71,7 +71,7 @@ gitkeep是一个hack，用于在仓库中保留空目录；
 3. replace;   设置有replace属性后，会调用router.replace(),导航后不会留下history记录
 4. active-class = "";  设置链接激活的CSS类名,默认值可通过构造linkActiveClass来全局配置
 
-- 路由信息对象($route----$router为router实例)
+#### 路由信息对象($route----$router为router实例)
 1. $route.path     当前路由的绝对路径
 2. $route.params   当前路由参数（动态路由），无参为空对象
 3. $route.query    当前路由查询参数（?...），无参为空对象
@@ -80,3 +80,8 @@ gitkeep是一个hack，用于在仓库中保留空目录；
 6. $route.name     当前路由的名称
 7. $route.matched
 
+> ### vue
+#### computed(属性的实时计算)
+- 经过处理返回的数据值,只要源数据没有发生改变,computed函数里面对相应的数据就不会反生改变,相当于缓存在本地;发生改变的时候,computed对应数据的函数也会发生改变;
+- 与methods对比，只有当数据改变才会执行函数否则计算的结果还是之前的计算结果即使是重新渲染，而methods在重新渲染时会不会因为data的改变来决定是否执行，都会执行的，相当于computed具有缓存的作用；
+- 与watch对比，watch是观察和响应Vue实例上的数据变化，但用computed解决数据计算好（原因不清楚），watch是命令氏的回调；
