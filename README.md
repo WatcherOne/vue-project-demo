@@ -58,3 +58,25 @@ gitkeep是一个hack，用于在仓库中保留空目录；
 15.'space-before-blocks': [0, 'always'],     //不以新行开始的块{前面要不要有空格
 16.'space-before-function-paren': [0, 'always'], //函数定义时括号前面要不要有空格
 ```
+
+> ### vue-router
+- router-view
+- 是一个功能组件，渲染路径匹配的视图组件
+
+- router-link具有路由功能应用的导航
+- 属性
+1. to = "";   指定目标地址，点击后，内部会把to的值传到router.push()<br/>
+   v-bind:to = ""; /  :to = ""; (另外有这两种写法)
+2. tag = "";  默认渲染成a标签，tag可以生成别的标签
+3. replace;   设置有replace属性后，会调用router.replace(),导航后不会留下history记录
+4. active-class = "";  设置链接激活的CSS类名,默认值可通过构造linkActiveClass来全局配置
+
+- 路由信息对象($route----$router为router实例)
+1. $route.path     当前路由的绝对路径
+2. $route.params   当前路由参数（动态路由），无参为空对象
+3. $route.query    当前路由查询参数（?...），无参为空对象
+4. $route.hash     当前路由的hash值（#...），无参为空字符串
+5. $route.fullPath 当前路由完整路径（包括查询和hash）
+6. $route.name     当前路由的名称
+7. $route.matched
+

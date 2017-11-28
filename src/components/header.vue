@@ -1,0 +1,64 @@
+<template>
+	<div class="header-nav">
+		<ul>
+			<li>
+				<router-link to="/index">主页</router-link>
+			</li>
+			<li>
+				<router-link to="/my-daily">日志</router-link>
+			</li>
+			<li>
+				<router-link to="/my-photo">照片墙</router-link>
+			</li>
+			<li>
+				<router-link to="/my-message">留言</router-link>
+			</li>
+			<li>
+				<router-link to="/my-thinking">说说</router-link>
+			</li>
+			<li>
+				<a href="javascript:;">更多</a>
+			</li>
+		</ul>
+	</div>
+</template>
+
+<script>
+  export default {
+  	name: 'index',
+  	data() {
+			return {
+			}
+		}
+	}
+</script>
+
+<style scoped>
+.header-nav {
+	height: 50px;
+	line-height: 50px;
+	padding: 0px 500px;
+	background-color: #1F1F1F;
+	color: #F0ECEC;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+	margin: 0px;
+}
+li {
+	float: left;
+	font-size: 18px;
+	width: 80px;
+	text-align: center;
+}
+a {
+	display: inline-block;
+	width: 100%;
+	color: #B5B5B5;
+}
+a:hover, .active {
+	background-color: #383838;
+	color: #A1B6B2;
+}
+</style>

@@ -1,23 +1,43 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <HeaderNav v-bind:name="$route.path" />
+    <transition name="slide-fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import HeaderNav from '@/components/header';
+
+  export default {
+    components: {
+      HeaderNav
+    }
+  }
 </script>
 
 <style>
+body {
+  margin: 0px;
+  padding: 0px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  /* 使页面上的字体抗锯齿，更加清晰 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+a {
+  text-decoration: none;
+  /* color: #42b983; */
+  cursor: pointer;
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
