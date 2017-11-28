@@ -1,15 +1,15 @@
-## vue-project
-> 技术栈
+# vue-project
+```javascript
+时间：2017-11-27 ------
+目的：对vue的学习
+```
+<hr/>
+## 技术栈
 - vue
 - vue-router
 - vuex
 - webpack
 - node
-
-```javascript
-时间：2017-11-27 ------
-目的：对vue的学习
-```
 
 > ### .gitkeep
 ```java
@@ -21,18 +21,18 @@ gitkeep是一个hack，用于在仓库中保留空目录；
 
 > ### .eslintrc
 - 检查代码规范
-配置： "quotes": [2, "double"]
-#### 第一部分是规则名
-#### 第二部分是表示级别：0:-不验证；1-警告；2-错误
-使用ESLint规则：
+- 配置： "quotes": [2, "double"]
+- 第一部分是规则名
+- 第二部分是表示级别：0:-不验证；1-警告；2-错误
+- 使用ESLint规则：
 1. 使用.eslintrc文件
 2. 在package.json中添加eslintConfig配置块
-3. 代码文件中定义: "extends": "eslint:recommended"(使用默认规则进行校验)
-*关闭验证： /*eslint-disable */
-*开启验证： /*eslint-enable  */
-*不验证：   /*eslint-disable no-alert, no-console */
-*要验证：   /*eslint-enable no-alert */
-## 常见规则说明
+3. 代码文件中定义: "extends": "eslint:recommended"(使用默认规则进行校验) <br/>
+*关闭验证： /*eslint-disable */ <br/>
+*开启验证： /*eslint-enable  */ <br/>
+*不验证：   /*eslint-disable no-alert, no-console */ <br/>
+*要验证：   /*eslint-enable no-alert */ <br/>
+### 常见规则说明
 ```java
 1. 'no-var': 0,                           //禁止使用var，用let和const代替
 2. 'no-console': 0,                       //禁止使用console
