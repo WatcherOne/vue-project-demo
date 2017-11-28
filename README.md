@@ -11,6 +11,7 @@
 - vuex
 - webpack
 - node
+<hr/>
 
 > ### .gitkeep
 ```java
@@ -23,7 +24,7 @@ gitkeep是一个hack，用于在仓库中保留空目录；
 > ### .eslintrc
 ```java
 1. 检查代码规范
-2. 配置：&nbsp; "quotes": [2, "double"]
+2. 配置： 'quotes': [2, 'double']
 - 第一部分是规则名
 - 第二部分是表示级别：0:-不验证；1-警告；2-错误
 ```
@@ -36,7 +37,7 @@ gitkeep是一个hack，用于在仓库中保留空目录；
 *开启验证： /*eslint-enable  */ <br/>
 *不验证：   /*eslint-disable no-alert, no-console */ <br/>
 *要验证：   /*eslint-enable no-alert */ <br/>
-#### 常见规则说明
+#### 常见规则说明(link: https://www.tuicool.com/articles/rIFBfey)
 ```java
 1. 'no-var': 0,                           //禁止使用var，用let和const代替
 2. 'no-console': 0,                       //禁止使用console
