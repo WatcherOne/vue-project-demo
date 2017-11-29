@@ -24,31 +24,26 @@
 </template>
 
 <style scoped lang="less" rel="stylesheet/less">
-.header-nav {
-	height: 50px;
-	line-height: 50px;
-	padding: 0px 500px;
-	background-color: #1F1F1F;
-	color: #F0ECEC;
-}
-ul {
-  list-style-type: none;
-  padding: 0px;
-	margin: 0px;
-	li {
+	.header-nav {
+		height: 50px;
+		line-height: 50px;
+		padding: 0px 500px;
+		background-color: #1F1F1F;
+		color: #F0ECEC;
+	}
+	ul li {
 		float: left;
 		font-size: 18px;
 		width: 80px;
 		text-align: center;
 	}
-}
-a {
-	display: inline-block;
-	width: 100%;
-	color: #B5B5B5;
-}
-a:hover, .active {
-	background-color: #383838;
-	color: #A1B6B2;
-}
+	a {
+		display: inline-block;
+		width: 100%;
+		color: #B5B5B5;
+	}
+	a:hover, .active {
+		background-color: #383838;
+		color: #A1B6B2;
+	}
 </style>
