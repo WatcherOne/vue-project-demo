@@ -25,6 +25,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'static': resolve('static'),
     }
   },
   module: {
@@ -40,6 +41,10 @@ module.exports = {
         }
       }] : []),
       {
+        test: /\.(less|css)$/,
+        use: ['vue-style-loader', 'style-loader','css-loader','less-loader', 'autoprefixer'],
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
@@ -48,6 +53,10 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
+      },
+      {
+        test : /\.json$/,
+        loader : 'json'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

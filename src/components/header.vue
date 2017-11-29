@@ -23,7 +23,7 @@
 	</div>
 </template>
 
-<style scoped>
+<style scoped lang="less" rel="stylesheet/less">
 .header-nav {
 	height: 50px;
 	line-height: 50px;
@@ -35,12 +35,12 @@ ul {
   list-style-type: none;
   padding: 0px;
 	margin: 0px;
-}
-li {
-	float: left;
-	font-size: 18px;
-	width: 80px;
-	text-align: center;
+	li {
+		float: left;
+		font-size: 18px;
+		width: 80px;
+		text-align: center;
+	}
 }
 a {
 	display: inline-block;

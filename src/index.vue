@@ -17,7 +17,7 @@
   }
 </script>
 
-<style>
+<style lang="less" rel="stylesheet/less">
 body {
   margin: 0px;
   padding: 0px;

@@ -4,6 +4,7 @@
     <div v-on:click="addCount()">增加1</div>
     <div v-on:click="delCount()">减少1</div>
     {{ number }}
+    {{ count }}
   </div>
 </template>
 
@@ -34,7 +35,6 @@ export default {
   // commit：  this.$store.actions.changeCount()
   methods: {
     addCount() {
-      console.log(this.count, this.number);
       this.$store.commit('addCount', this.count);
       this.number++;
     },

@@ -21,9 +21,9 @@ export default {
 		state.address = address;
 	},
 	addCount: (state, count) => {
-		state.count = count++;
+		state.count = count + 1;
     },
     delCount: (state, count) => {
-        state.count = count--;
+        state.count = count - 1;
     }
 }
