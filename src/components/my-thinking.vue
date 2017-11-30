@@ -12,4 +12,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped lang="less" rel="stylesheet/less"></style>

@@ -27,15 +27,19 @@
 	.header-nav {
 		height: 50px;
 		line-height: 50px;
-		padding: 0px 500px;
+		text-align: center;
 		background-color: #1F1F1F;
 		color: #F0ECEC;
 	}
-	ul li {
-		float: left;
-		font-size: 18px;
-		width: 80px;
-		text-align: center;
+	ul {
+		display: inline-block;
+		width: 1046px;
+		li {
+			float: left;
+			font-size: 18px;
+			width: 80px;
+			text-align: center;
+		}
 	}
 	a {
 		display: inline-block;
